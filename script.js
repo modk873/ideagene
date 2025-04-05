@@ -22,9 +22,21 @@ function generateIdea() {
     document.getElementById('idea-text').textContent = randomIdea;
 }
 
-function translateIdea() {
+async function translateIdea() {
     const ideaText = document.getElementById('idea-text').textContent;
     if (ideaText === 'اضغط على زر توليد الفكرة للحصول على فكرة جديدة.') return;
-    // يمكنك إضافة ترجمة باستخدام Google Translate API أو أي API ترجمة أخرى.
-    alert('تم ترجمة الفكرة: ' + ideaText);
+
+    // Use Google Translate API for translation (can be replaced with other APIs).
+    const translation = await fetch(`https://translation.googleapis.com/language/translate/v2?key=YOUR_GOOGLE_API_KEY`, {
+        method: 'POST',
+        body: JSON.stringify({
+            q: ideaText,
+            target: 'en'
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(response => response.json());
+
+    document.getElementById('translation-result').textContent = "ترجمة: " + translation.data.translations[0].translatedText;
 }
