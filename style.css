@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #ff7f50, #ff6347);
+    background: linear-gradient(to right, #ff6347, #ff4500); /* تدرج لوني أحمر */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@ body {
 
 h1 {
     font-size: 2.5em;
-    color: #ff6347;
+    color: #ff4500; /* اللون الأحمر */
     margin-bottom: 20px;
 }
 
@@ -49,13 +49,13 @@ select, button {
 }
 
 button {
-    background-color: #ff6347;
+    background-color: #ff4500; /* اللون الأحمر */
     color: white;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #e55342;
+    background-color: #e03e00; /* اللون الأحمر الداكن */
 }
 
 select {
@@ -70,12 +70,12 @@ select {
 }
 
 #translate-btn {
-    background-color: #ff7f50;
+    background-color: #ff6347; /* الأحمر الفاتح */
     margin-top: 20px;
 }
 
 #translate-btn:hover {
-    background-color: #e06e45;
+    background-color: #e03e00;
 }
 
 #translation-result {
